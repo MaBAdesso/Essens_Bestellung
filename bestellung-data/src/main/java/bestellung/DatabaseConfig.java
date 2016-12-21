@@ -24,8 +24,8 @@ public class DatabaseConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/essensbesellung");
-		dataSource.setUsername("JPA_User"); // Benutzernamen hier eintragen
-		dataSource.setPassword("maA@:3TWA+*C}Nu."); // Passwort hier eintragen
+		dataSource.setUsername("user"); // Benutzernamen hier eintragen
+		dataSource.setPassword("password"); // Passwort hier eintragen
 		return dataSource;
 
 		/*

@@ -1,0 +1,32 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.adesso.bestellung</groupId>
+	<artifactId>bestellung-api</artifactId>
+	<version>0.0.1-snapshot</version>
+	<parent>
+		<groupId>de.adesso.bestellung</groupId>
+		<artifactId>bestellung</artifactId>
+		<version>0.0.1-snapshot</version>
+	</parent>
+	<packaging>jar</packaging>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.adesso.bestellung</groupId>
+			<artifactId>bestellung-business</artifactId>
+			<version>0.0.1-snapshot</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		</dependency>
+		
+	</dependencies>
+	
+
+</project>

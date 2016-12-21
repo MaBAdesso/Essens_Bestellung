@@ -1,0 +1,6 @@
+bestellung\models\Lieferant.class
+bestellung\models\EntityBase.class
+bestellung\models\Bestellposition.class
+bestellung\models\Bestellung.class
+bestellung\repository\BestellungRepository.class
+bestellung\DatabaseConfig.class

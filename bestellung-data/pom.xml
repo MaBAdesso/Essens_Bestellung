@@ -1,0 +1,30 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.adesso.bestellung</groupId>
+	<artifactId>bestellung-data</artifactId>
+	<version>0.0.1-snapshot</version>
+	<parent>
+		<groupId>de.adesso.bestellung</groupId>
+		<artifactId>bestellung</artifactId>
+		<version>0.0.1-snapshot</version>
+	</parent>
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
+ 		 <dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+  		</dependency>
+	</dependencies>
+</project>

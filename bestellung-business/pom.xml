@@ -1,0 +1,23 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.adesso.bestellung</groupId>
+	<artifactId>bestellung-business</artifactId>
+	<version>0.0.1-snapshot</version>
+	<parent>
+		<groupId>de.adesso.bestellung</groupId>
+		<artifactId>bestellung</artifactId>
+		<version>0.0.1-snapshot</version>
+	</parent>
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>de.adesso.bestellung</groupId>
+			<artifactId>bestellung-data</artifactId>
+			<version>0.0.1-snapshot</version>
+		</dependency>
+		<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+</dependency>
+	</dependencies>
+</project>

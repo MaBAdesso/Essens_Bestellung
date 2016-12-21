@@ -30,7 +30,6 @@ public class BestellungService {
 
 	public void deleteBestellung(UUID bestellungID) {
 		bestellungRepository.delete(bestellungID);
-
 	}
 
 }

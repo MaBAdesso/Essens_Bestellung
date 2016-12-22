@@ -16,6 +16,10 @@ import bestellung.service.BestellungService;
 @RestController
 public class BestellungController {
 
+	public BestellungController() {
+
+	}
+
 	@Autowired
 	private BestellungService bestellungService;
 

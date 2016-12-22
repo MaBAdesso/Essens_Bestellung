@@ -16,6 +16,10 @@ import bestellung.service.LieferantenService;
 @RestController
 public class LieferantenController {
 
+	public LieferantenController() {
+
+	}
+
 	@Autowired
 	private LieferantenService lieferantenService;
 

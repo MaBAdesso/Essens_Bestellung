@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bestellung.iml" filepath="$PROJECT_DIR$/bestellung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bestellung-api/bestellung-api.iml" filepath="$PROJECT_DIR$/bestellung-api/bestellung-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bestellung-business/bestellung-business.iml" filepath="$PROJECT_DIR$/bestellung-business/bestellung-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bestellung-data/bestellung-data.iml" filepath="$PROJECT_DIR$/bestellung-data/bestellung-data.iml" />
+    </modules>
+  </component>
+</project>

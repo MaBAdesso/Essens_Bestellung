@@ -14,6 +14,9 @@ import bestellung.service.BestellpositionService;
 @RestController
 public class BestellpositionController {
 
+	public BestellpositionController() {
+	}
+
 	@Autowired
 	private BestellpositionService bestellpositionService;
 

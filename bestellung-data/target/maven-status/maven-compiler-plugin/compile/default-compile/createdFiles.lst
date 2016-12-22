@@ -1,6 +1,12 @@
 bestellung\models\Lieferant.class
-bestellung\models\EntityBase.class
 bestellung\models\Bestellposition.class
-bestellung\models\Bestellung.class
+bestellung\ObjectToJsonUtil.class
 bestellung\repository\BestellungRepository.class
+bestellung\models\Address.class
+bestellung\repository\AddressRepository.class
 bestellung\DatabaseConfig.class
+bestellung\repository\LieferantRepository.class
+bestellung\repository\BestellpositionRepository.class
+bestellung\models\EntityBase.class
+bestellung\models\Bestellung.class
+bestellung\ConnectionSettings.class

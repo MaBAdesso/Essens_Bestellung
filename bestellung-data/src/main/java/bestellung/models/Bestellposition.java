@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 
-@Entity(name = "bestellung")
+@Entity(name = "bestellposition")
 public class Bestellposition extends EntityBase {
 
 	private String name;

@@ -3,12 +3,17 @@ package bestellung.models;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "bestellposition")
 public class Bestellposition extends EntityBase {
 
+	@NotNull
 	private String name;
+
 	private String artikel;
+
+	@NotNull
 	private BigDecimal preis;
 
 	public String getName() {

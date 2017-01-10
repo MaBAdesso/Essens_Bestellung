@@ -1,22 +1,25 @@
 package bestellung.service;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import bestellung.models.Lieferant;
 import bestellung.repository.LieferantRepository;
 
 @Service
+@Transactional
 public class LieferantenService {
 
 	@Autowired
 	private LieferantRepository lieferantenRepository;
 
-	public List<Lieferant> getAllLieferanten() {
-		return lieferantenRepository.findAll();
+	public Page<Lieferant> listAllByPage(Pageable pageable) {
+		return lieferantenRepository.findAll(pageable);
 	}
 
 	public Lieferant getLieferant(UUID lieferantenID) {

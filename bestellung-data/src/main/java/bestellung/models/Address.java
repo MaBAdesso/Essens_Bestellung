@@ -12,7 +12,7 @@ public class Address extends EntityBase {
 	private String street;
 
 	@NotNull
-	@DecimalMax(value = "1503")
+	@DecimalMax(value = "1500")
 	private int houseNumber;
 
 	@NotNull

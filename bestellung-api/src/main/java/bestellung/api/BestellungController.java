@@ -1,9 +1,10 @@
 package bestellung.api;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,8 +25,8 @@ public class BestellungController {
 	private BestellungService bestellungService;
 
 	@RequestMapping(method = RequestMethod.GET, value = "/bestellungen")
-	public List<Bestellung> getAllBestellungen() {
-		return bestellungService.getAllBestellungen();
+	public Page<Bestellung> getAllBestellungen(Pageable pageable) {
+		return bestellungService.getAllByPage(pageable);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/bestellungen/{bestellungID}")

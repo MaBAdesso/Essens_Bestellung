@@ -39,5 +39,4 @@ public class Bestellposition extends EntityBase {
 	public void setPreis(BigDecimal preis) {
 		this.preis = preis;
 	}
-
 }

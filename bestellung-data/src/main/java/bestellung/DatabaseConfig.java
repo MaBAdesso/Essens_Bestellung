@@ -1,6 +1,5 @@
 package bestellung;
 
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,14 +34,15 @@ public class DatabaseConfig {
 	}
 
 	@Bean
-	public EntityManagerFactory entityManagerFactory() {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setDataSource(dataSource());
 		factory.setJpaVendorAdapter(jpaVendorAdapter());
 		factory.setPackagesToScan("bestellung.models");
 
-		return factory.getObject();
+		// factory.afterPropertiesSet();
+		return factory;
 	}
 
 	@Bean
@@ -59,7 +59,7 @@ public class DatabaseConfig {
 	public PlatformTransactionManager transactionManager() {
 
 		JpaTransactionManager txManager = new JpaTransactionManager();
-		txManager.setEntityManagerFactory(entityManagerFactory());
+		txManager.setEntityManagerFactory(entityManagerFactory().getObject());
 		return txManager;
 	}
 }

@@ -1,9 +1,10 @@
 package bestellung.service;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,8 +17,8 @@ public class BestellungService {
 	@Autowired
 	private BestellungRepository bestellungRepository;
 
-	public List<Bestellung> getAllBestellungen() {
-		return bestellungRepository.findAll();
+	public Page<Bestellung> getAllByPage(Pageable pageable) {
+		return bestellungRepository.findAll(pageable);
 	}
 
 	public Bestellung getBestellung(UUID bestellungID) {

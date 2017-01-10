@@ -1,8 +1,8 @@
 package bestellung.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import bestellung.models.Bestellposition;
@@ -14,11 +14,13 @@ public class BestellpositionService {
 	@Autowired
 	private BestellpositionRepository bestellpositionRepository;
 
-	public List<Bestellposition> getAllbestellPosition() {
-		return bestellpositionRepository.findAll();
+	public Page<Bestellposition> getAllByPage(Pageable pageable) {
+
+		return bestellpositionRepository.findAll(pageable);
 	}
 
 	public Bestellposition updateAndSave(Bestellposition bestellPosition) {
+
 		return bestellpositionRepository.save(bestellPosition);
 	}
 

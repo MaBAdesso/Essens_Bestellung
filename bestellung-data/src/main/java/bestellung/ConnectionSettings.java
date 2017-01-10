@@ -11,9 +11,9 @@ public class ConnectionSettings {
 
 	public ConnectionSettings() {
 		this.driver = "com.mysql.jdbc.Driver";
-		this.url = "jdbc:mysql://localhost:3306/essensbesellung";
-		this.username = " JPA_User";
-		this.password = "maA@:3TWA+*C}Nu.";
+		this.url = "jdbc:mysql://localhost:3306/EssensBestellung?useSSL=False";
+		this.username = "testuser";
+		this.password = "123456";
 	}
 
 	public String getDriver() {

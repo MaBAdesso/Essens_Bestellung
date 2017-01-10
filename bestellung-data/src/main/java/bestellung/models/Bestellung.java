@@ -19,7 +19,7 @@ public class Bestellung extends EntityBase {
 	@JsonFormat(pattern = "yyyyMMddHHmm")
 	private Calendar lieferungsZeit;
 
-	@OneToOne(cascade = CascadeType.DETACH) // beim löschen wir Lieferant nicht
+	@OneToOne(cascade = CascadeType.DETACH) // beim löschen wird Lieferant nicht
 											// gelöscht
 	private Lieferant lieferant;
 

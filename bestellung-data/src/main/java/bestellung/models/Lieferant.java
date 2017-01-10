@@ -3,10 +3,12 @@ package bestellung.models;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "lieferant")
 public class Lieferant extends EntityBase {
 
+	@NotNull
 	private String name;
 	private String menu;
 

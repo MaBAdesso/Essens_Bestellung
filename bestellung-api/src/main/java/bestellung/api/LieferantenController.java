@@ -1,9 +1,10 @@
 package bestellung.api;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,10 @@ import bestellung.service.LieferantenService;
 @RestController
 public class LieferantenController {
 
+	public LieferantenController() {
+
+	}
+
 	@Autowired
 	private LieferantenService lieferantenService;
 
@@ -25,8 +30,8 @@ public class LieferantenController {
 	 * @return
 	 */
 	@RequestMapping(method = RequestMethod.GET, value = "/lieferanten")
-	public List<Lieferant> getAllLieferanten() {
-		return lieferantenService.getAllLieferanten();
+	public Page<Lieferant> getAllLieferanten(Pageable pageable) {
+		return lieferantenService.listAllByPage(pageable);
 	}
 
 	/**
@@ -53,8 +58,6 @@ public class LieferantenController {
 	 * 
 	 * Verändert die Werte eines Lieferanten
 	 * 
-	 * @param lieferant
-	 * @param lieferantenID
 	 * @return
 	 */
 	@RequestMapping(method = RequestMethod.PUT, value = "/lieferanten/{lieferantenID}")

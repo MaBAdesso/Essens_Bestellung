@@ -22,7 +22,6 @@ public class ObjectToJsonUtil {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setSerializationInclusion(Include.NON_NULL);
 		System.out.println(mapper.writeValueAsString(bestellung));
-
 	}
 
 }
